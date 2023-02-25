@@ -70,9 +70,9 @@ class APIToken(APIView):
                 return Response(
                     {'token': str(token)}, status=status.HTTP_200_OK)
 
-            return Response(
-                {'confirmation_code': 'Неверный код подтверждения'},
-                status=status.HTTP_400_BAD_REQUEST)
+        return Response(
+            {'confirmation_code': 'Неверный код подтверждения'},
+            status=status.HTTP_400_BAD_REQUEST)
 
 
 class UserViewSet(viewsets.ModelViewSet):
