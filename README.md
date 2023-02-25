@@ -1,4 +1,6 @@
-# CI/CD проекта Yamdb ![yamdb_final](https://github.com/GlebMudrov/yamdb_final/actions/workflows/yamdb_workflow.yaml/badge.svg)
+![yamdb_workflow](https://github.com/GlebMudrov/yamdb_final/actions/workflows/yamdb_workflow.yaml/badge.svg)
+
+# CI/CD проекта Yamdb
 
 ### Описание проекта:
 Учебный проект, предназначенный для отработки навыков и применение теории при командной
