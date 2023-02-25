@@ -49,7 +49,7 @@ jobs:
         uses: docker/build-push-action@v2 
         with:
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/api_yamdb-web:v1.0
+          tags: glebmudrov/api_yamdb-web:v1.0
 
   deploy:
     runs-on: ubuntu-latest
