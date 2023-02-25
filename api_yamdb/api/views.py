@@ -1,6 +1,6 @@
 from django.contrib.auth.tokens import default_token_generator
-from django.shortcuts import get_object_or_404
 from django.db.models import Avg
+from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, status, viewsets
 from rest_framework.decorators import action
@@ -8,25 +8,19 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import AccessToken
-
+from reviews.models import Category, Genre, Review, Title
 from users.models import User
-from reviews.models import Title, Category, Genre, Review
-from .filters import TitleFilter
-from .permissions import (IsAdmin,
-                          IsAdminOrIsModeratorOrIsUser,
-                          IsAdminOrReadOnly)
 
-from .serializers import (AdminSerializer,
-                          JWTTokenSerializer,
-                          UserSerializer,
-                          CategorySerializer,
-                          GenreSerializer,
-                          TitleCreateSerializer,
-                          TitleReadSerializer,
-                          CommentSerializer,
-                          ReviewSerializer)
-from .utils import send_confirmation_code_on_email
+from .filters import TitleFilter
 from .mixins import MixinViewSet
+from .permissions import (IsAdmin, IsAdminOrIsModeratorOrIsUser,
+                          IsAdminOrReadOnly)
+from .serializers import (AdminSerializer, CategorySerializer,
+                          CommentSerializer, GenreSerializer,
+                          JWTTokenSerializer, ReviewSerializer,
+                          TitleCreateSerializer, TitleReadSerializer,
+                          UserSerializer)
+from .utils import send_confirmation_code_on_email
 
 
 class SignUp(APIView):
